@@ -5,12 +5,9 @@ export default class SearchBar extends Component {
     super(props);
 
     this.state = { term: '' };
-
-    this.onInputChange = this.onInputChange.bind(this);
   }
 
-  onInputChange(event) {
-    console.log(event.target.value);
+  onInputChange = (event) => {
     this.setState({ term: event.target.value })
   }
 
@@ -18,7 +15,7 @@ export default class SearchBar extends Component {
     return (
       <form className="input-group">
         <input
-          placeholder="Get a five day forecast in your favorite cities"
+          placeholder="Enter your favorite cities to get a five-day forecast!"
           className="form-control"
           value={this.state.term}
           onChange={this.onInputChange} />
