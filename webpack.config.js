@@ -1,7 +1,11 @@
+// const Dotenv = require('dotenv-webpack');
+const DotenvPlugin = require('webpack-dotenv-plugin');
+
 module.exports = {
   entry: [
     './src/index.js'
   ],
+  // target: 'node',
   output: {
     path: __dirname,
     publicPath: '/',
@@ -22,5 +26,20 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: './'
-  }
+  },
+  plugins: [
+    new DotenvPlugin({
+      // sample: './.env.default',
+      path: './.env'
+    })
+  ]
+  // node: {
+  //   fs: "empty"
+  // },
+  // plugins: [
+  //   new Dotenv({
+  //     path: './.env', 
+  //     safe: true
+  //   })
+  // ]
 };
