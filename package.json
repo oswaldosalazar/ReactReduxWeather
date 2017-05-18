@@ -38,6 +38,9 @@
     "react-router": "^2.0.1",
     "react-sparklines": "^1.6.0",
     "redux": "^3.0.4",
-    "redux-promise": "^0.5.3"
+    "redux-promise": "^0.5.3",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-dotenv-plugin": "^2.0.0"
   }
 }
