@@ -7,5 +7,5 @@ npm-debug.log
 *.iml
 /.idea
 .env
-.env.sample
+.env.example
 .vscode/
